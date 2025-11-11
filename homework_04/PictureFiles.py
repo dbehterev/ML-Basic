@@ -60,12 +60,3 @@ class PictureFile(Files):
             except BaseException as error:
                 print('An exception occurred: {}'.format(error))
         
-jpeg_file = PictureFile('c:\\Education\\Python\\Learning\\tmp\\', 'bing.jpg', 'JPG')
-#jpeg_file.create()
-#print(jpeg_file.owner())
-#print(jpeg_file.picture_type)
-#jpeg_file.new()
-#jpeg_file.open()
-#info = jpeg_file.get_picture_info()
-#print(info.get('format'))
-#print(jpeg_file.type)
