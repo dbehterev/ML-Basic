@@ -14,7 +14,7 @@ class Car(Vehicle):
         super().__init__(weight, fuel, fuel_consumption)
         self.engine = None
 
-    def set_engine(self, engine: Engine):
+    def set_engine(self, engine: Engine) -> None:
         if not isinstance(engine, Engine):
             raise ValueError("engine should be instance of Engine class")
 

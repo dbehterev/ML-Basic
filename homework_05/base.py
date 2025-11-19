@@ -6,7 +6,7 @@ from abc import ABC
 from homework_05.exceptions import LowFuelError,NotEnoughFuel
 
 
-class Vehicle():
+class Vehicle(ABC):
     """Base class for vehicle"""
     
     def __init__(self, weight: float = 1000, fuel: float = 40, fuel_consumption: float = 10):
@@ -24,7 +24,7 @@ class Vehicle():
         self.fuel_consumption   = fuel_consumption  # fuel consumption for every 100km
         self.started            = False
         
-    def start(self):
+    def start(self) -> None:
         """Start engine"""
         
         if not self.started:
@@ -34,7 +34,7 @@ class Vehicle():
         else:
             print("Already started!")
     
-    def move(self, distance: float):
+    def move(self, distance: float) -> None:
         """Moving vehicle
             distance in km
         """        

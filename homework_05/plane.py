@@ -12,16 +12,16 @@ class Plane(Vehicle):
         """Initialization attributes of the class"""
         
         super().__init__(max_cargo, fuel, fuel_consumption)
-        self.cargo = 0
-        self.max_cargo = max_cargo
+        self.cargo      = 0
+        self.max_cargo  = max_cargo
             
-    def load_cargo(self, cargo: float):
+    def load_cargo(self, cargo: float) -> None:
         if (cargo + self.cargo) > self.max_cargo:
             raise CargoOverload('Overweight by '+str((cargo + self.cargo) - self.max_cargo))
         
         self.cargo += cargo
         
-    def remove_all_cargo(self):
+    def remove_all_cargo(self) -> float:
         _cargo = self.cargo
         self.cargo = 0
         return _cargo
